@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Add a Joke</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="add.js"></script>
+</head>
+
+<body>
+    <!-- optional floating shapes to match theme -->
+    <div class="shape"></div>
+    <div class="shape"></div>
+    <div class="shape"></div>
+
+    <main class="card">
+        <h2>Add a New Joke</h2>
+        <p>All fields are <strong>required</strong>.</p>
+
+        <form id="joke-form" novalidate>
+            <div class="field">
+                <label for="setup">Setup</label>
+                <textarea id="setup" name="setup" rows="3" required
+                    placeholder="e.g., Why do programmers prefer dark mode?"></textarea>
+                <small class="error" id="err-setup"></small>
+            </div>
+
+            <div class="field">
+                <label for="punchline">Punchline</label>
+                <textarea id="punchline" name="punchline" rows="2" required
+                    placeholder="Because light attracts bugs."></textarea>
+                <small class="error" id="err-punchline"></small>
+            </div>
+
+            <div class="field">
+                <label for="category">Category</label>
+                <select id="category" name="category" required>
+                    <option value="">-- Select a category --</option>
+                    <option>Programming</option>
+                    <option>Hardware & Tech</option>
+                    <option>Networking & IT</option>
+                    <option>Wordplay & Office Life</option>
+                </select>
+                <small class="error" id="err-category"></small>
+            </div>
+
+            <div class="actions">
+                <button type="submit" id="submit-btn">Save Joke</button>
+                <a href="index.html" class="link-btn secondary">Back to Home</a>
+            </div>
+
+
+            <p id="result" class="result"></p>
+        </form>
+    </main>
+
+    <footer>Wizard • Add Joke</footer>
+</body>
+
+</html>

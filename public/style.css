@@ -1,0 +1,422 @@
+/* -------------------------------------------------------
+   0) Minimal Reset
+------------------------------------------------------- */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html,
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+ul,
+ol,
+dl,
+dd {
+    margin: 0;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block;
+    max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+button {
+    border: 0;
+    background: none;
+}
+
+:root {
+    /* Colors */
+    --bg-grad-a: #5b5b73;
+    --bg-grad-b: #758aa0;
+
+    --text: #0e121b;
+    --text-on-dark: #ffffff;
+
+    --surface: rgba(255, 255, 255, 0.92);
+    --surface-weak: rgba(255, 255, 255, 0.75);
+
+    --primary-a: #4f6ef7;
+    --primary-b: #657efc;
+    --primary-a-hover: #3e5de0;
+    --primary-b-hover: #506cf4;
+
+    --secondary-a: #9ea3b0;
+    --secondary-b: #b3b8c4;
+    --secondary-a-hover: #8e94a4;
+    --secondary-b-hover: #a0a6b8;
+
+    --chip-bg: rgba(255, 255, 255, 0.75);
+    --chip-text: #1c2230;
+    --chip-active-bg: #1c2230;
+    --chip-active-text: #ffffff;
+
+    --error: #b00020;
+    --muted: #3a445a;
+
+    /* Layout */
+    --radius-sm: 6px;
+    --radius-md: 10px;
+    --radius-lg: 16px;
+
+    --space-1: 4px;
+    --space-2: 8px;
+    --space-3: 12px;
+    --space-4: 16px;
+    --space-5: 20px;
+    --space-6: 24px;
+    --space-8: 32px;
+
+    --shadow-sm: 0 3px 8px rgba(0, 0, 0, 0.20);
+    --shadow-md: 0 10px 30px rgba(0, 0, 0, 0.22);
+}
+
+/* -------------------------------------------------------
+   1) Page Base
+------------------------------------------------------- */
+body {
+    min-height: 100vh;
+    width: 100%;
+    overflow-x: hidden;
+    background: linear-gradient(135deg, var(--bg-grad-a), var(--bg-grad-b));
+    color: var(--text-on-dark);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+    font-family: 'Segoe UI', system-ui, -apple-system, Arial, sans-serif;
+    text-align: center;
+    padding: var(--space-8) var(--space-4) var(--space-6);
+    position: relative;
+}
+
+/* Headings & text */
+h1 {
+    font-size: clamp(28px, 3vw, 44px);
+    font-weight: 800;
+    letter-spacing: 0.3px;
+    margin-bottom: var(--space-4);
+    color: #fff;
+}
+
+h2 {
+    font-size: clamp(22px, 2.4vw, 32px);
+    font-weight: 700;
+    margin-bottom: var(--space-3);
+    color: var(--text);
+}
+
+h3 {
+    font-size: clamp(18px, 2vw, 22px);
+    font-weight: 600;
+    margin-bottom: var(--space-3);
+}
+
+p,
+label,
+small {
+    color: var(--text);
+}
+
+/* Footer */
+footer {
+    margin-top: var(--space-8);
+    color: #fff;
+    font-size: 0.95rem;
+    opacity: 0.9;
+}
+
+/* -------------------------------------------------------
+   2) Floating Shapes (background accents)
+------------------------------------------------------- */
+.shape {
+    position: absolute;
+    border-radius: 50%;
+    opacity: 0.28;
+    animation: float 20s infinite ease-in-out;
+    z-index: 0;
+    filter: blur(0.2px);
+}
+
+.shape:nth-child(1) {
+    width: 150px;
+    height: 150px;
+    background: #ff6f61;
+    top: 10%;
+    left: 15%;
+    animation-delay: 0s;
+}
+
+.shape:nth-child(2) {
+    width: 100px;
+    height: 100px;
+    background: #00bcd4;
+    top: 50%;
+    left: 70%;
+    animation-delay: 5s;
+}
+
+.shape:nth-child(3) {
+    width: 200px;
+    height: 200px;
+    background: #9b59b6;
+    top: 80%;
+    left: 30%;
+    animation-delay: 10s;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0) rotate(0deg);
+    }
+
+    50% {
+        transform: translateY(-50px) rotate(180deg);
+    }
+
+    100% {
+        transform: translateY(0) rotate(360deg);
+    }
+}
+
+/* Respect reduced motion */
+@media (prefers-reduced-motion: reduce) {
+    .shape {
+        animation: none;
+    }
+}
+
+/* -------------------------------------------------------
+   3) Buttons (unified)
+------------------------------------------------------- */
+button,
+.link-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+
+    background: linear-gradient(135deg, var(--primary-a), var(--primary-b));
+    color: #fff;
+    padding: 0.65em 1.2em;
+    border-radius: var(--radius-md);
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 1rem;
+    text-decoration: none;
+    box-shadow: var(--shadow-sm);
+    transition: transform 0.18s ease, box-shadow 0.18s ease, background 0.18s ease;
+    position: relative;
+    z-index: 1;
+    /* above shapes */
+}
+
+button:hover,
+.link-btn:hover {
+    transform: translateY(-2px);
+    background: linear-gradient(135deg, var(--primary-a-hover), var(--primary-b-hover));
+    box-shadow: 0 5px 14px rgba(0, 0, 0, 0.25);
+}
+
+button:active,
+.link-btn:active {
+    transform: translateY(0);
+}
+
+button:disabled {
+    opacity: 0.65;
+    cursor: not-allowed;
+}
+
+/* Secondary variant (Back to Home) */
+.link-btn.secondary {
+    background: linear-gradient(135deg, var(--secondary-a), var(--secondary-b));
+    color: #fff;
+}
+
+.link-btn.secondary:hover {
+    background: linear-gradient(135deg, var(--secondary-a-hover), var(--secondary-b-hover));
+}
+
+/* Keyboard focus */
+button:focus-visible,
+.link-btn:focus-visible,
+.filter-btn:focus-visible {
+    outline: 3px solid #fff;
+    outline-offset: 2px;
+}
+
+/* Group spacing under the H3 */
+.actions-inline {
+    display: inline-flex;
+    gap: var(--space-3);
+    margin-top: var(--space-2);
+}
+
+/* -------------------------------------------------------
+   4) Filter "chips" (4-category buttons)
+------------------------------------------------------- */
+#filters {
+    margin-top: 12px;
+    z-index: 1;
+    position: relative;
+}
+
+#filter-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    margin-top: 8px;
+}
+
+.filter-btn {
+    background: var(--chip-bg);
+    color: var(--chip-text);
+    border-radius: 999px;
+    padding: 0.45rem 0.9rem;
+    font-weight: 600;
+    box-shadow: var(--shadow-sm);
+    transition: transform 0.15s ease, background 0.15s ease, color 0.15s ease;
+}
+
+.filter-btn:hover {
+    transform: translateY(-1px);
+}
+
+.filter-btn.active {
+    background-color: var(--chip-active-bg);
+    color: var(--chip-active-text);
+}
+
+/* -------------------------------------------------------
+   5) Card (wizard container)
+------------------------------------------------------- */
+.card {
+    max-width: 720px;
+    margin: 2rem auto;
+    background: var(--surface);
+    border-radius: var(--radius-lg);
+    padding: 1.2rem 1.4rem;
+    box-shadow: var(--shadow-md);
+    text-align: left;
+}
+
+/* -------------------------------------------------------
+   6) Form styles (wizard)
+------------------------------------------------------- */
+.field {
+    margin-bottom: 1rem;
+}
+
+.field label {
+    display: block;
+    font-weight: 700;
+    margin-bottom: 0.45rem;
+    color: var(--text);
+}
+
+.field input,
+.field textarea,
+.field select {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0.65rem 0.75rem;
+    border-radius: var(--radius-md);
+    border: 1px solid #cbd3e1;
+    background: #fff;
+    color: var(--text);
+    outline: none;
+    transition: box-shadow 0.15s ease, border-color 0.15s ease, background 0.15s ease;
+}
+
+.field input:focus,
+.field textarea:focus,
+.field select:focus {
+    border-color: #6f86ff;
+    box-shadow: 0 0 0 3px rgba(111, 134, 255, 0.25);
+}
+
+.actions {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    margin-top: 0.75rem;
+}
+
+.error {
+    color: var(--error);
+    font-size: 0.92rem;
+}
+
+.result {
+    margin-top: 0.75rem;
+    font-weight: 700;
+    color: var(--text);
+}
+
+/* -------------------------------------------------------
+   7) Content block (joke output)
+------------------------------------------------------- */
+#joke {
+    margin: var(--space-6) auto 0;
+    max-width: 780px;
+    background: var(--surface-weak);
+    color: var(--text);
+    padding: var(--space-4);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-sm);
+    line-height: 1.5;
+    z-index: 1;
+    position: relative;
+    min-height: 2.2rem;
+}
+
+/* -------------------------------------------------------
+   8) Layout helpers
+------------------------------------------------------- */
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+}
+
+/* -------------------------------------------------------
+   9) Responsive tweaks
+------------------------------------------------------- */
+@media (max-width: 520px) {
+
+    .actions,
+    .actions-inline {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    #joke {
+        margin-top: var(--space-4);
+    }
+}

@@ -1,0 +1,287 @@
+[
+  {
+    "setup": "Why do programmers prefer dark mode?",
+    "punchline": "Because light attracts bugs.",
+    "category": "Programming"
+  },
+  {
+    "setup": "I would tell you a UDP joke,",
+    "punchline": "but you might not get it.",
+    "category": "Networking & IT"
+  },
+  {
+    "setup": "How many programmers to change a light bulb?",
+    "punchline": "None—hardware problem.",
+    "category": "Hardware & Tech"
+  },
+  {
+    "setup": "Why do Java developers wear glasses?",
+    "punchline": "Because they don’t C#.",
+    "category": "Programming"
+  },
+  {
+    "setup": "What’s a programmer’s favorite hangout place?",
+    "punchline": "The Foo Bar.",
+    "category": "Programming"
+  },
+  {
+    "setup": "Why was the developer unhappy at their job?",
+    "punchline": "They wanted arrays.",
+    "category": "Programming"
+  },
+  {
+    "setup": "Why did the Python data scientist get arrested?",
+    "punchline": "For using pandas in public.",
+    "category": "Programming"
+  },
+  {
+    "setup": "What’s a programmer’s favorite snack?",
+    "punchline": "Bytes.",
+    "category": "Programming"
+  },
+  {
+    "setup": "Why do programmers always mix up Halloween and Christmas?",
+    "punchline": "Because Oct 31 equals Dec 25.",
+    "category": "Programming"
+  },
+  {
+    "setup": "Why was the JavaScript developer sad?",
+    "punchline": "Because they didn’t Node how to Express themselves.",
+    "category": "Programming"
+  },
+  {
+    "setup": "Why do programmers hate nature?",
+    "punchline": "Too many bugs.",
+    "category": "Programming"
+  },
+  {
+    "setup": "What did the developer say to their broken code?",
+    "punchline": "You had one job!",
+    "category": "Programming"
+  },
+  {
+    "setup": "Why do backend developers love REST?",
+    "punchline": "Because it helps them stay resourceful.",
+    "category": "Programming"
+  },
+  {
+    "setup": "Why did the programmer quit his job?",
+    "punchline": "Because he didn’t get arrays.",
+    "category": "Programming"
+  },
+  {
+    "setup": "Why did the developer go broke?",
+    "punchline": "Because they used up all their cache.",
+    "category": "Programming"
+  },
+  {
+    "setup": "What is a programmer’s favorite musical key?",
+    "punchline": "C# minor.",
+    "category": "Programming"
+  },
+  {
+    "setup": "Why did the computer show up at work late?",
+    "punchline": "It had a hard drive.",
+    "category": "Hardware & Tech"
+  },
+  {
+    "setup": "What’s a computer’s favorite beat?",
+    "punchline": "An algo-rhythm.",
+    "category": "Programming"
+  },
+  {
+    "setup": "What did the router say to the doctor?",
+    "punchline": "It hurts when IP.",
+    "category": "Networking & IT"
+  },
+  {
+    "setup": "Why did the database administrator leave their wife?",
+    "punchline": "They found a better join.",
+    "category": "Programming"
+  },
+  {
+    "setup": "Why was the computer cold?",
+    "punchline": "It left its Windows open.",
+    "category": "Hardware & Tech"
+  },
+  {
+    "setup": "What did the computer do at lunchtime?",
+    "punchline": "Had a byte.",
+    "category": "Hardware & Tech"
+  },
+  {
+    "setup": "Why was the computer tired when it got home?",
+    "punchline": "It had a hard drive.",
+    "category": "Hardware & Tech"
+  },
+  {
+    "setup": "What do you call a computer that sings?",
+    "punchline": "A Dell.",
+    "category": "Hardware & Tech"
+  },
+  {
+    "setup": "Why did the developer always carry a pencil?",
+    "punchline": "In case they lost their cache.",
+    "category": "Programming"
+  },
+  {
+    "setup": "How does a computer get drunk?",
+    "punchline": "It takes screenshots.",
+    "category": "Hardware & Tech"
+  },
+  {
+    "setup": "Why did the programmer get stuck in the shower?",
+    "punchline": "The instructions said: lather, rinse, repeat.",
+    "category": "Programming"
+  },
+  {
+    "setup": "What did the HTML say to the CSS?",
+    "punchline": "You style me well.",
+    "category": "Programming"
+  },
+  {
+    "setup": "Why couldn’t the computer take its hat off?",
+    "punchline": "It had a bad CAPS LOCK.",
+    "category": "Hardware & Tech"
+  },
+  {
+    "setup": "Why did the developer go outside?",
+    "punchline": "To get some fresh cache.",
+    "category": "Programming"
+  },
+  {
+    "setup": "Why don’t bachelors like Git?",
+    "punchline": "Because they are afraid to commit.",
+    "category": "Programming"
+  },
+  {
+    "setup": "Why did the PowerPoint presentation cross the road?",
+    "punchline": "To get to the next slide.",
+    "category": "Wordplay & Office Life"
+  },
+  {
+    "setup": "Why was the computer sneezing?",
+    "punchline": "It had a virus!",
+    "category": "Networking & IT"
+  },
+  {
+    "setup": "Why do programmers love the ocean?",
+    "punchline": "Because of all the C.",
+    "category": "Programming"
+  },
+  {
+    "setup": "Why did the IT manager go broke?",
+    "punchline": "Because he lost his domain in a bet.",
+    "category": "Networking & IT"
+  },
+  {
+    "setup": "What’s a hacker’s favorite season?",
+    "punchline": "Phishing season.",
+    "category": "Networking & IT"
+  },
+  {
+    "setup": "Why did the coder cross the road?",
+    "punchline": "To refactor the chicken class.",
+    "category": "Programming"
+  },
+  {
+    "setup": "Why did the robot go on vacation?",
+    "punchline": "To recharge its batteries.",
+    "category": "Hardware & Tech"
+  },
+  {
+    "setup": "Why did the AI cross the road?",
+    "punchline": "It was programmed by a chicken.",
+    "category": "Hardware & Tech"
+  },
+  {
+    "setup": "Why did the developer stay calm during a crisis?",
+    "punchline": "They handled exceptions.",
+    "category": "Programming"
+  },
+  {
+    "setup": "Why did the laptop get therapy?",
+    "punchline": "It had too many tabs open.",
+    "category": "Wordplay & Office Life"
+  },
+  {
+    "setup": "What’s a computer’s favorite dance move?",
+    "punchline": "The byte-step.",
+    "category": "Hardware & Tech"
+  },
+  {
+    "setup": "Why did the coder get kicked out of school?",
+    "punchline": "For too many class conflicts.",
+    "category": "Programming"
+  },
+  {
+    "setup": "Why did the Java developer love their coffee?",
+    "punchline": "Because it was Java.",
+    "category": "Programming"
+  },
+  {
+    "setup": "What did the 0 say to the 8?",
+    "punchline": "Nice belt!",
+    "category": "Wordplay & Office Life"
+  },
+  {
+    "setup": "Why was the computer hungry?",
+    "punchline": "It needed more chips.",
+    "category": "Hardware & Tech"
+  },
+  {
+    "setup": "What’s a computer’s least favorite food?",
+    "punchline": "Spam.",
+    "category": "Networking & IT"
+  },
+  {
+    "setup": "Why did the function break up with the loop?",
+    "punchline": "It kept going around in circles.",
+    "category": "Programming"
+  },
+  {
+    "setup": "Why did the web developer leave the restaurant?",
+    "punchline": "The table layout was terrible.",
+    "category": "Programming"
+  },
+  {
+    "setup": "What do you call a computer superhero?",
+    "punchline": "Captain Processor.",
+    "category": "Hardware & Tech"
+  },
+  {
+    "setup": "Why was the developer confident?",
+    "punchline": "They always returned true.",
+    "category": "Programming"
+  },
+  {
+    "setup": "Why do programmers whatever",
+    "punchline": "Just because",
+    "category": "Networking & IT"
+  },
+  {
+    "setup": "Mine",
+    "punchline": "mine",
+    "category": "Wordplay & Office Life"
+  },
+  {
+    "setup": "Custom joke",
+    "punchline": "joke",
+    "category": "Programming"
+  },
+  {
+    "setup": "adasdsad",
+    "punchline": "asdasda",
+    "category": "Programming"
+  },
+  {
+    "setup": "vgpo78hobp8",
+    "punchline": "drpo6ifto",
+    "category": "Programming"
+  },
+  {
+    "setup": "g78fytvytcrtuy",
+    "punchline": "g iygvytvyv y",
+    "category": "Hardware & Tech"
+  }
+]

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Joke of the Day</title>
+  <link rel="stylesheet" href="style.css">
+  <script defer src="app.js"></script>
+</head>
+
+<body>
+  <!-- floating shapes for your gradient background -->
+  <div class="shape"></div>
+  <div class="shape"></div>
+  <div class="shape"></div>
+
+  <h1>SYNTAX ERROR JOKE OF THE DAY</h1>
+
+  <div>
+    <h3>Click to generate a joke of the day</h3>
+    <button id="joke-btn">Make Me Laugh!</button>
+    <!-- New: opens the wizard page -->
+    <a href="add.html" class="link-btn" style="margin-left:10px;">Add a Joke</a>
+  </div>
+
+  <!-- Optional: your simplified 4-category filter buttons (remove if not using) -->
+  <div id="filters" style="margin-top: 12px;">
+    <strong>Filter by category:</strong>
+    <div id="filter-buttons" style="display:flex;justify-content:center;gap:10px;margin-top:8px;flex-wrap:wrap;">
+      <button class="filter-btn active" data-cat="All">All</button>
+      <button class="filter-btn" data-cat="Programming">Programming</button>
+      <button class="filter-btn" data-cat="Hardware & Tech">Hardware & Tech</button>
+      <button class="filter-btn" data-cat="Networking & IT">Networking & IT</button>
+      <button class="filter-btn" data-cat="Wordplay & Office Life">Wordplay & Office Life</button>
+    </div>
+  </div>
+
+  <p id="joke"></p>
+
+  <footer>Ivy Tech IT Challenge - November 7th, 2025</footer>
+</body>
+
+</html>
