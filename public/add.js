@@ -1,9 +1,4 @@
-// 🌐 Replace this with your own Cloud Run service URL:
-const API_BASE = "https://jotd-api-wl6ruoti2q-uc.a.run.app";
-
-// LOCALHOST
-// const API_BASE = "http://localhost:8000";
-
+// Utility: show inline error messages
 function showError(id, msg) {
     const el = document.getElementById(id);
     if (el) el.textContent = msg || "";
@@ -17,6 +12,10 @@ document.addEventListener("DOMContentLoaded", () => {
     const result = document.getElementById("result");
     const submitBtn = document.getElementById("submit-btn");
 
+    // Use API base injected from HTML; fall back to same-origin (localhost:8080)
+    const API_BASE =
+        (typeof window !== "undefined" && window.API_BASE) ? window.API_BASE : window.location.origin;
+
     form.addEventListener("submit", async (e) => {
         e.preventDefault();
 
@@ -25,24 +24,15 @@ document.addEventListener("DOMContentLoaded", () => {
         showError("err-punchline", "");
         showError("err-category", "");
         result.textContent = "";
+        result.style.color = "";
 
-        // simple required validation
+        // required validation
         let ok = true;
-        if (!setup.value.trim()) {
-            showError("err-setup", "Setup is required.");
-            ok = false;
-        }
-        if (!punchline.value.trim()) {
-            showError("err-punchline", "Punchline is required.");
-            ok = false;
-        }
-        if (!category.value.trim()) {
-            showError("err-category", "Please choose a category.");
-            ok = false;
-        }
+        if (!setup.value.trim()) { showError("err-setup", "Setup is required."); ok = false; }
+        if (!punchline.value.trim()) { showError("err-punchline", "Punchline is required."); ok = false; }
+        if (!category.value.trim()) { showError("err-category", "Please choose a category."); ok = false; }
         if (!ok) return;
 
-        // submit to API
         submitBtn.disabled = true;
         submitBtn.textContent = "Saving...";
 
@@ -63,16 +53,18 @@ document.addEventListener("DOMContentLoaded", () => {
                 throw new Error(data.detail || `HTTP ${resp.status}`);
             }
 
-            const data = await resp.json();
-            result.textContent = "✅ Joke saved!";
+            await resp.json();
+            result.textContent = "✅ Joke saved successfully!";
+            result.style.color = "green";
 
-            // optional: clear the form
+            // clear form
             setup.value = "";
             punchline.value = "";
             category.value = "";
         } catch (err) {
             console.error(err);
-            result.textContent = "❌ Failed to save joke.";
+            result.textContent = "❌ Failed to save joke. Please try again.";
+            result.style.color = "#b00020";
         } finally {
             submitBtn.disabled = false;
             submitBtn.textContent = "Save Joke";

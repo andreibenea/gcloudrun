@@ -4,4 +4,5 @@ Dockerfile
 .dockerignore
 .git
 .gitignore
+**/.DS_Store
 README.md

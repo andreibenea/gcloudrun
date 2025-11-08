@@ -1,14 +1,27 @@
 {
-  "name": "projectgoogle",
+  "name": "jotd-api",
   "version": "1.0.0",
+  "description": "Syntax Error - Joke of the Day: Express + REST API + static site",
   "main": "server.js",
   "type": "commonjs",
   "scripts": {
     "start": "node server.js",
-    "dev": "NODE_ENV=development node server.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "NODE_ENV=development nodemon server.js",
+    "test": "echo \"No tests configured\" && exit 0"
   },
   "dependencies": {
     "express": "^5.1.0"
-  }
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "keywords": [
+    "express",
+    "api",
+    "jokes",
+    "cloud-run"
+  ],
+  "author": "Andrei Benea",
+  "license": "ISC"
 }
+

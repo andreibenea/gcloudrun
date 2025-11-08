@@ -1,19 +1,25 @@
-# ---- Base image ----
-FROM node:20-alpine
+# Use a small Node 20 image
+FROM node:20-alpine AS base
 
-# ---- Create app directory ----
+# Create app directory
 WORKDIR /usr/src/app
 
-# ---- Copy package files and install dependencies ----
+# Install only production deps using lockfile
 COPY package*.json ./
-RUN npm install --production
+RUN npm ci --omit=dev
 
-# ---- Copy remaining source code ----
+# Copy the rest of the source
 COPY . .
 
-# ---- Expose the port Cloud Run will use ----
-ENV PORT=8000
-EXPOSE 8000
+# Ensure the runtime port is 8080 for Cloud Run
+ENV NODE_ENV=production
+ENV PORT=8080
 
-# ---- Start the server ----
+# Drop privileges (run as non-root "node" user)
+USER node
+
+# Expose the port (for local runs; Cloud Run respects PORT env)
+EXPOSE 8080
+
+# Start the server
 CMD ["node", "server.js"]

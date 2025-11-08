@@ -4,13 +4,23 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Add a Joke</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Add a Joke • Syntax Error</title>
+    <meta name="description" content="Submit a new programming or tech joke to the Joke of the Day app." />
+    <link rel="icon" href="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f923.svg" />
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- Environment-aware API base injection -->
+    <script>
+        window.API_BASE =
+            window.location.hostname === "localhost"
+                ? "http://localhost:8000"
+                : "https://jotd-api-wl6ruoti2q-uc.a.run.app";
+    </script>
+
     <script defer src="add.js"></script>
 </head>
 
 <body>
-    <!-- optional floating shapes to match theme -->
     <div class="shape"></div>
     <div class="shape"></div>
     <div class="shape"></div>
@@ -51,12 +61,11 @@
                 <a href="index.html" class="link-btn secondary">Back to Home</a>
             </div>
 
-
             <p id="result" class="result"></p>
         </form>
     </main>
 
-    <footer>Wizard • Add Joke</footer>
+    <footer>Syntax Error • Add Joke Wizard</footer>
 </body>
 
 </html>
