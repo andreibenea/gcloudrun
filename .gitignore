@@ -45,9 +45,6 @@ Dockerfile
 .firebaserc
 *.runtimeconfig.json
 
-# GitHub Actions cache
-.github/
-
 # Other
 *.swp
 *.swo
