@@ -1,8 +1,31 @@
+# Node dependencies
 node_modules
 npm-debug.log
+yarn-error.log
+
+# Logs
+*.log
+
+# Docker files
 Dockerfile
 .dockerignore
+
+# Git
 .git
 .gitignore
+
+# MacOS artifacts
 **/.DS_Store
+
+# Documentation and metadata
 README.md
+LICENSE
+
+# Local environment files
+.env
+.env.*
+
+# Build and CI/CD configs not needed in container
+.github/
+.vscode/
+.idea/
